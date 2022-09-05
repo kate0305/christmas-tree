@@ -1,0 +1,73 @@
+<div class="main__wrapper">
+  <div class="wrapper column">
+    <section class="filters">
+      <div class="filter">
+        <h2 class="filter__title">Фильтры по значению</h2>
+        <div class="filter__item">Форма:
+          <input class="filter__shape filter__shape_ball" type="checkbox" name="" id="">
+          <input class="filter__shape filter__shape_bell" type="checkbox" name="" id="">
+          <input class="filter__shape filter__shape_cone" type="checkbox" name="" id="">
+          <input class="filter__shape filter__shape_snow" type="checkbox" name="" id="">
+          <input class="filter__shape filter__shape_figure" type="checkbox" name="" id="">
+        </div>
+        <div class="filter__item">Цвет:
+          <input class="filter__color filter__color_white" type="checkbox" name="" id="">
+          <input class="filter__color filter__color_yellow" type="checkbox" name="" id="">
+          <input class="filter__color filter__color_red" type="checkbox" name="" id="">
+          <input class="filter__color filter__color_blue" type="checkbox" name="" id="">
+          <input class="filter__color filter__color_green" type="checkbox" name="" id="">
+        </div>
+        <div class="filter__item">Размер:
+          <input class="filter__size filter__size_big" type="checkbox" name="" id="">
+          <input class="filter__size filter__size_middle" type="checkbox" name="" id="">
+          <input class="filter__size filter__size_small" type="checkbox" name="" id="">
+        </div>
+        <div class="filter__item">Только любимые
+          <input class="filter__like" type="checkbox" name="" id="">
+        </div>
+      </div>
+      <div class="filter">
+        <h2 class="filter__title">Фильтры по диапазону</h2>
+        <div class="filter__item">Количество экземпляров:
+          <div class="filter__inner">
+            <output class="filter__output">1</output>
+            <div class="range-container">
+              <input class="filter__range" type="range" name="" id="">
+              <input class="filter__range" type="range" name="" id="">
+            </div>
+            <output class="filter__output">20</output>
+          </div>
+        </div>
+        <div class="filter__item">Год приобретения:
+          <div class="filter__inner">
+            <output class="filter__output">1940</output>
+            <div class="range-container">
+              <input class="filter__range" type="range" name="" id="">
+              <input class="filter__range" type="range" name="" id="">
+            </div>
+            <output class="filter__output">2020</output>
+          </div>
+        </div>
+      </div>
+      <div class="filter">
+        <h2 class="filter__title">Сортировка</h2>
+        <select class="filter__sort" id="filter__sort" name="sort" id="">
+          <option value="name-min">По названию (А-Я)</option>
+          <option value="name-max">По названию (Я-А)</option>
+          <option value="year-min">По году покупки (сначала старые)</option>
+          <option value="year-max">По году покупки (сначала новые)</option>
+        </select>
+        <button class="filter__reset">Сброс фильтров</button>
+      </div>
+    </section>
+    <section class="toys-wrapper">
+    </section>
+    <section class="modal hidden">
+      <div class="modal__wrapper">
+        <span class="modal__close">×</span>
+        <p class="modal__text">Извините, все слоты заполнены!</p>
+      </div>
+    </section>
+  </div>
+</div>
+

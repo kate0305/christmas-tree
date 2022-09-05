@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": true,
+    "module": "es6",
+    "target": "es6",
+    "allowJs": true,
+    "checkJs": false,
+    "removeComments": true,
+    "downlevelIteration": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./dist"
+  },
+  "files": ["src/index.ts", "module.d.ts"],
+  "exclude": ["node_modules"],
+  "include": ["src/**/*", "module.d.ts"]
+}

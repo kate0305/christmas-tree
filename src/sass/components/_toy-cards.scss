@@ -1,0 +1,108 @@
+.toys-wrapper {
+  width: 100%;
+  @include flex($j-c: flex-start);
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  @include screen {
+    justify-content: center;
+  }
+  @include big-tablet {
+    margin-left: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+.toy-card {
+  position: relative;
+  @include flex($j-c: center);
+  flex-wrap: wrap;
+  width: 300px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  @include font($family: "Steppe", $size: 18px, $height: 2);
+  color: $color-text;
+  background-color: rgba(22, 80, 90, 0.6);
+  border: 1px solid $color-link;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  &.active {
+    .toy-card__favorite {
+      color: transparent;
+      background-color: $color-link;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 13%;
+        left: 43%;
+        width: 12px;
+        height: 25px;
+        border-right: 6px solid $color-text;
+        border-bottom: 6px solid $color-text;
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
+
+.toy-card__title {
+  width: 290px;
+  text-align: center;
+  @include font($family: "Neucha", $size: 20px);
+  letter-spacing: 2px;
+}
+
+.toy-card__description {
+  font-size: 18px;
+  padding-left: 18px;
+}
+
+.toy-card__img {
+  width: 90px;
+  padding-top: 10px;
+  align-self: flex-start;
+}
+
+.toy-card__span {
+  padding-left: 7px;
+}
+
+.toy-card__favorite {
+  position: relative;
+  width: 95px;
+  height: 56px;
+  margin-right: 180px;
+  margin-top: -100px;
+  padding: 5px;
+  @include font($family: "Steppe", $size: 15px);
+  color: $color-text;
+  background-color: $background-color-item;
+  border: 1px solid $color-link;
+  border-radius: 10px;
+  outline: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  &:hover {
+    background-color: $color-link;
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+  &.active {
+    background-color: $color-link;
+  }
+  &.active::after {
+    content: "";
+    position: absolute;
+    top: 13%;
+    left: 43%;
+    width: 12px;
+    height: 25px;
+    border-right: 6px solid $color-text;
+    border-bottom: 6px solid $color-text;
+    transform: rotate(45deg);
+  }
+}

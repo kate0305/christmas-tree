@@ -1,0 +1,105 @@
+.main-page {
+  width: 100%;
+  position: relative;
+  @include flex($j-c: center);
+  flex-direction: column;
+  @include font($family: "Neucha", $size: 30px, $height: 1.5);
+  letter-spacing: 2px;
+  color: $color-text;
+  background-color: transparent;
+}
+
+.main-page__container {
+  height: calc(100vh - 140px);
+  @include flex($j-c: center);
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-page__title {
+  width: 600px;
+  height: 200px;
+  padding-top: 5px;
+  text-align: center;
+  background-color: rgba(22, 80, 90, 0.6);
+  border: 2px solid $color-link;
+  border-radius: 15px;
+  z-index: 2;
+}
+
+.main-page__subtitle {
+  display: block;
+}
+
+.main-page__btn {
+  @include flex($j-c: center);
+  width: 200px;
+  height: 70px;
+  padding-top: 5px;
+  margin-top: 40px;
+  @include font($family: "Neucha", $size: 30px, $height: 1);
+  color: $color-text;
+  background-color: rgba(22, 80, 90, 0.6);
+  border: 2px solid $color-link;
+  border-radius: 15px;
+  outline: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  z-index: 2;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.ball {
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  &::before {
+    position: absolute;
+    width: 5px;
+    content: '';
+    background-color: #aaaaaa;
+  }
+  &.ball_big {
+    top: 130px;
+    left: calc(50% - 500px);
+    width: 330px;
+    height: 410px;
+    background-image: url("../assets/ball/1.png");
+  
+    @include big-tablet {
+      left: calc(50% - 380px);
+      width: 405px;
+      height: 500px;
+    }
+    &::before {
+      height: 136px;
+      top: -130px;
+      left: 50%;
+      @include big-tablet {
+        left: calc(50% - 2px);
+      }
+    }
+  }
+  &.ball_small {
+    top: 110px;
+    left: calc(50% + 200px);
+    width: 280px;
+    height: 350px;
+    background-image: url("../assets/ball/2.png");
+    @include big-tablet {
+      width: 320px;
+      height: 400px;
+      left: calc(50% + 50px);
+    }
+    &::before {
+      height: 115px;
+      top: -110px;
+      left: calc(50% - 2px);
+      @include big-tablet {
+        left: calc(50% - 5px);
+      }
+    }
+  }
+}

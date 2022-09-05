@@ -1,0 +1,19 @@
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+@import "base/base";
+@import "base/fonts";
+
+@import "components/filters";
+@import "components/modal";
+@import "components/snow";
+@import "components/toy-cards";
+
+
+@import "layout/footer";
+@import "layout/main";
+@import "layout/header";
+@import "layout/start-page";
+@import "layout/tree"
